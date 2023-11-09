@@ -14,6 +14,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class WeatherProjectApplication {
 
     public static void main(String[] args) {
+        System.out.println("Hello");
         SpringApplication.run(WeatherProjectApplication.class, args);
     }
 
