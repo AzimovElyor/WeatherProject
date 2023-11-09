@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+</head>
+<body>
+<form action="/weather/current-weather" method="post">
+ <select name="city">
+     <option th:each="country:${countries}" th:text="${country}" th:value="${country}"></option>
+ </select>
+    <button type="submit">Submit</button>
+</form>
+<div th:if="${weather != null}">
+    <h2 th:text="'Poytaxt' + ${weather.getLocation().getRegion()}"></h2>
+    <h2 th:text="'Davlat' + ${weather.getLocation().getCountry()}"></h2>
+    <h2 th:text="'Gradus' + ${weather.getCurrent().getTemp_c()}" >Hello</h2>
+</div>
+</body>
+</html>
